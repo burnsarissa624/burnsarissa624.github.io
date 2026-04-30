@@ -446,7 +446,6 @@
   .nlp-feature-title { font-size: 0.88rem; font-weight: 500; margin-bottom: 0.2rem; }
   .nlp-feature-desc { font-size: 0.8rem; color: rgba(245,240,232,0.55); }
 
-
   /* HOW I THINK */
   .thinking-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1.5rem; }
   .thinking-card {
@@ -618,9 +617,7 @@
     from { opacity: 0; transform: translateY(24px); }
     to { opacity: 1; transform: translateY(0); }
   }
-  .hero-content > * {
-    animation: fadeUp 0.6s ease both;
-  }
+  .hero-content > * { animation: fadeUp 0.6s ease both; }
   .hero-eyebrow { animation-delay: 0.1s; }
   .hero h1 { animation-delay: 0.2s; }
   .hero-bio { animation-delay: 0.3s; }
@@ -650,14 +647,9 @@
   .file-info { flex: 1; }
   .file-name { font-weight: 500; font-size: 0.92rem; margin-bottom: 0.2rem; }
   .file-type { font-size: 0.75rem; color: var(--muted); font-family: 'Space Mono', monospace; }
-  .file-arrow {
-    font-size: 1rem;
-    color: var(--gold);
-    font-weight: 700;
-    flex-shrink: 0;
-  }
+  .file-arrow { font-size: 1rem; color: var(--gold); font-weight: 700; flex-shrink: 0; }
 
-  /* EDUCATION PROJECT */
+  /* EDUCATION / DC PROJECT SHARED STYLES */
   .edu-project-hero {
     background: var(--ink);
     border-radius: 16px;
@@ -739,6 +731,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1.5rem;
+    margin-bottom: 2rem;
   }
   .vis-card {
     background: var(--cream);
@@ -764,14 +757,10 @@
     margin-bottom: 0.8rem;
   }
 
-  /* MOBILE additions */
+  /* MOBILE */
   @media (max-width: 768px) {
     .edu-project-hero, .findings-grid, .vis-row { grid-template-columns: 1fr; }
     .edu-stats-grid { grid-template-columns: 1fr 1fr; }
-  }
-
-
-  @media (max-width: 768px) {
     .hero { grid-template-columns: 1fr; }
     .hero-visual { display: none; }
     .startups-grid, .thinking-grid, .data-grid, .skills-split, .exploring-grid { grid-template-columns: 1fr; }
@@ -784,6 +773,7 @@
 <body>
 
 
+<!-- NAV — added DC Salary link -->
 <nav>
   <a href="#" class="nav-logo">Arissa Burns</a>
   <ul class="nav-links">
@@ -791,6 +781,7 @@
     <li><a href="#projects">Projects</a></li>
     <li><a href="#data">Data Science</a></li>
     <li><a href="#edu-project">Edu Project</a></li>
+    <li><a href="#dc-salary">DC Salary</a></li>
     <li><a href="#thinking">Thinking</a></li>
     <li><a href="#experience">Experience</a></li>
     <li><a href="#contact">Contact</a></li>
@@ -843,7 +834,6 @@
     <h2 class="section-title">What I'm Building</h2>
   </div>
   <div class="startups-grid">
-
     <div class="startup-card rust">
       <div class="startup-icon">🏗</div>
       <div class="startup-name">CrewCred</div>
@@ -856,7 +846,6 @@
         <span class="feature-pill">Financial Visibility</span>
       </div>
     </div>
-
     <div class="startup-card sage">
       <div class="startup-icon">📋</div>
       <div class="startup-name">PermitPal</div>
@@ -869,7 +858,6 @@
         <span class="feature-pill">Workflow Automation</span>
       </div>
     </div>
-
   </div>
 </section>
 
@@ -981,7 +969,6 @@
     <span class="section-num">04</span>
     <h2 class="section-title">Education Inequality Analysis</h2>
   </div>
-
   <div class="edu-project-hero">
     <div>
       <div class="label">// Data Science · Spring 2026 · Team Neural Network</div>
@@ -1015,7 +1002,6 @@
       </div>
     </div>
   </div>
-
   <p style="font-family:'DM Serif Display',serif; font-size:1.3rem; margin-bottom:1.5rem; color:var(--ink);">Key Findings</p>
   <div class="findings-grid">
     <div class="finding-card">
@@ -1031,7 +1017,6 @@
       <p>The correlation heatmap revealed near-zero correlations across all variable pairs. Educational inequality isn't explained by any one factor — it's the intersection of funding, demographics, geography, and school type acting together.</p>
     </div>
   </div>
-
   <p style="font-family:'DM Serif Display',serif; font-size:1.3rem; margin-bottom:1.5rem; color:var(--ink);">Visualizations Built</p>
   <div class="vis-row">
     <div class="vis-card">
@@ -1055,16 +1040,116 @@
       <p>Showed that most private high schools across the 10 states have minority populations between 20–60%, revealing that private schools are more demographically diverse than commonly assumed.</p>
     </div>
   </div>
-
   <p style="font-family:'DM Serif Display',serif; font-size:1.3rem; margin-bottom:1.5rem; color:var(--ink);">Project Files</p>
   <a href="https://github.com/burnsarissa624/burnsarissa624.github.io" target="_blank" class="btn-primary" style="display:inline-flex; align-items:center; gap:0.5rem; text-decoration:none;">View Project Files on GitHub →</a>
+</section>
 
+
+<!-- ── DC SALARY PROJECT SECTION — NEW ── -->
+<section id="dc-salary">
+  <div class="section-header">
+    <span class="section-num">05</span>
+    <h2 class="section-title">DC Government Salary Analysis</h2>
+  </div>
+
+  <div class="edu-project-hero">
+    <div>
+      <div class="label">// Data Science · MATH 014 · Spring 2026 · Howard University</div>
+      <h3>Compensation in DC Government: A Data-Driven Analysis</h3>
+      <p>An end-to-end data science project analyzing 40,476 DC public employee salary records across 88 agencies — uncovering what structurally drives compensation, where inequality lives, and what the city's record hiring surge is hiding. Built using Python, Pandas, Matplotlib, Seaborn, and Plotly in a Jupyter Notebook environment.</p>
+      <div class="tech-stack">
+        <span class="tech-pill">Python</span>
+        <span class="tech-pill">Pandas</span>
+        <span class="tech-pill">Matplotlib</span>
+        <span class="tech-pill">Seaborn</span>
+        <span class="tech-pill">Plotly</span>
+        <span class="tech-pill">Jupyter Notebook</span>
+        <span class="tech-pill">EDA</span>
+        <span class="tech-pill">Lorenz Curve</span>
+      </div>
+    </div>
+    <div class="edu-stats-grid">
+      <div class="edu-stat">
+        <div class="edu-stat-num">40,476</div>
+        <div class="edu-stat-label">Employees analyzed</div>
+      </div>
+      <div class="edu-stat">
+        <div class="edu-stat-num">88</div>
+        <div class="edu-stat-label">Agencies covered</div>
+      </div>
+      <div class="edu-stat">
+        <div class="edu-stat-num">$96K</div>
+        <div class="edu-stat-label">Median salary</div>
+      </div>
+      <div class="edu-stat">
+        <div class="edu-stat-num">9</div>
+        <div class="edu-stat-label">Visualizations built</div>
+      </div>
+    </div>
+  </div>
+
+  <p style="font-family:'DM Serif Display',serif; font-size:1.3rem; margin-bottom:1.5rem; color:var(--ink);">Key Findings</p>
+  <div class="findings-grid">
+    <div class="finding-card">
+      <h4>Pay Grade Is Everything</h4>
+      <p>Grade 16 employees earn a $175K median versus ~$57K at Grades 3–4. The grade ladder is the single strongest structural predictor of salary — more powerful than tenure, agency, or appointment type alone.</p>
+    </div>
+    <div class="finding-card">
+      <h4>A $46K Pay-Type Divide</h4>
+      <p>Even after annualizing hourly wages to full-time equivalent, hourly workers earn $46K less than salaried employees at the median — a structural two-tier system inside a nominally unified payroll.</p>
+    </div>
+    <div class="finding-card">
+      <h4>Moderate Inequality (Gini 0.221)</h4>
+      <p>DC's public payroll is significantly more equal than the US private sector (Gini ~0.45), but the bottom 50% of workers still earn only 34% of total salary — real inequality driven by a small upper tier.</p>
+    </div>
+    <div class="finding-card">
+      <h4>Specialized Agencies Out-Pay Large Ones</h4>
+      <p>Agency identity doesn't drive pay — workforce composition does. Finance, legal, and tech offices pay 45%+ above DCPS not because of their name, but because of who they hire.</p>
+    </div>
+    <div class="finding-card">
+      <h4>A Succession Crisis in the Making</h4>
+      <p>DC hit a record 3,212 new hires in 2025 — 11× the 1990s average of 216/yr. But that expansion is masking a retirement wave: the 1990s cohort now has 25–30 years of service and is approaching eligibility.</p>
+    </div>
+    <div class="finding-card">
+      <h4>Medical &amp; Legal Titles Dominate the Top</h4>
+      <p>Medical Officer in Psychiatry leads at a $367K median. Every title in the top 12 earns roughly 2× the overall median — all requiring advanced credentials, licenses, or executive responsibility.</p>
+    </div>
+  </div>
+
+  <p style="font-family:'DM Serif Display',serif; font-size:1.3rem; margin-bottom:1.5rem; color:var(--ink);">Visualizations Built</p>
+  <div class="vis-row">
+    <div class="vis-card">
+      <span class="vis-type">Bar Chart</span>
+      <h4>Salary by Pay Grade</h4>
+      <p>Color-banded vertical bars (navy → purple → teal → amber → red) showing how median salary climbs from Grade 1 to Grade 16, with a sharp leadership premium at Grades 14–16.</p>
+    </div>
+    <div class="vis-card">
+      <span class="vis-type">Horizontal Bar Chart</span>
+      <h4>Top-Paying Job Titles</h4>
+      <p>Purple gradient bars ranking the top 12 highest-paid job titles (min. 20 employees), with a gold dashed line marking the overall $96K median for comparison.</p>
+    </div>
+    <div class="vis-card">
+      <span class="vis-type">Area Chart</span>
+      <h4>DC Hiring Trends 1990–2025</h4>
+      <p>Purple line-and-fill chart showing 11× hiring growth over 30 years, with annotations for the 2020 COVID dip and the record 3,212-hire peak in 2025.</p>
+    </div>
+    <div class="vis-card">
+      <span class="vis-type">Lorenz Curve</span>
+      <h4>Salary Inequality — Surprise Visualization</h4>
+      <p>An economics-inspired equity lens on the salary distribution. The Gini coefficient of 0.221 places DC well below private sector inequality — but the curve reveals the gap is still real.</p>
+    </div>
+  </div>
+
+  <p style="font-family:'DM Serif Display',serif; font-size:1.3rem; margin-bottom:1.5rem; color:var(--ink);">Project Files</p>
+  <a href="https://github.com/burnsarissa624/burnsarissa624.github.io" target="_blank" class="btn-primary" style="display:inline-flex; align-items:center; gap:0.5rem; text-decoration:none;">
+    View Project on GitHub →
+  </a>
 </section>
 
 
 <section id="thinking">
   <div class="section-header">
-    <span class="section-num">03</span>
+    <span class="section-num">06</span>
     <h2 class="section-title">How I Think</h2>
   </div>
   <div class="thinking-grid">
@@ -1089,8 +1174,8 @@
 
 <section id="experience" style="background: var(--card-bg);">
   <div class="section-header">
-    <span class="section-num">04</span>
-    <h2 class="section-title">Experience & Leadership</h2>
+    <span class="section-num">07</span>
+    <h2 class="section-title">Experience &amp; Leadership</h2>
   </div>
   <div class="exp-list">
     <div class="exp-item">
@@ -1099,7 +1184,7 @@
         <div class="exp-org">Independent</div>
       </div>
       <div>
-        <div class="exp-role">Startup Founder — CrewCred & PermitPal</div>
+        <div class="exp-role">Startup Founder — CrewCred &amp; PermitPal</div>
         <p class="exp-desc">Identified a gap in financial infrastructure for construction subcontractors and built two complementary tools to address it. Responsible for product strategy, technical architecture, and go-to-market thinking. Learning how to move from idea to working product while balancing school.</p>
         <p class="exp-impact">→ Developing trust scoring models and permit management systems from the ground up</p>
       </div>
@@ -1110,7 +1195,7 @@
         <div class="exp-org">Research Lab</div>
       </div>
       <div>
-        <div class="exp-role">Research — Computational Biology & Genomics</div>
+        <div class="exp-role">Research — Computational Biology &amp; Genomics</div>
         <p class="exp-desc">Applied computational methods to biological datasets, developing skills in data cleaning, pattern recognition, and translating complex findings into actionable insights. Introduced to the intersection of data science and real-world scientific impact.</p>
         <p class="exp-impact">→ Strengthened ability to work rigorously with large, complex datasets</p>
       </div>
@@ -1121,7 +1206,7 @@
         <div class="exp-org">Delight Ministries</div>
       </div>
       <div>
-        <div class="exp-role">Leadership & Community</div>
+        <div class="exp-role">Leadership &amp; Community</div>
         <p class="exp-desc">Active leadership role in community-building and support. Developed people skills, communication under pressure, and the discipline of showing up consistently — qualities that transfer directly into how I lead teams and build products.</p>
         <p class="exp-impact">→ Deepened commitment to building for underserved and overlooked communities</p>
       </div>
@@ -1130,16 +1215,9 @@
 </section>
 
 
-
-
-
-
-
-
-
 <section style="background: var(--cream);">
   <div class="section-header">
-    <span class="section-num">07</span>
+    <span class="section-num">08</span>
     <h2 class="section-title">Skills</h2>
   </div>
   <div class="skills-split">
@@ -1153,13 +1231,13 @@
       <div class="skill-item"><span>Computational Biology Methods</span><div class="skill-bar"><div class="skill-fill" style="width:65%"></div></div></div>
     </div>
     <div>
-      <div class="skill-group-title" style="border-color: var(--sage);">Strategic & Business</div>
+      <div class="skill-group-title" style="border-color: var(--sage);">Strategic &amp; Business</div>
       <div class="skill-item"><span>Product Thinking</span><div class="skill-bar"><div class="skill-fill" style="width:88%; background: var(--sage);"></div></div></div>
       <div class="skill-item"><span>Startup Development</span><div class="skill-bar"><div class="skill-fill" style="width:80%; background: var(--sage);"></div></div></div>
       <div class="skill-item"><span>Market Analysis</span><div class="skill-bar"><div class="skill-fill" style="width:75%; background: var(--sage);"></div></div></div>
       <div class="skill-item"><span>Systems Design</span><div class="skill-bar"><div class="skill-fill" style="width:78%; background: var(--sage);"></div></div></div>
       <div class="skill-item"><span>Strategic Problem Solving</span><div class="skill-bar"><div class="skill-fill" style="width:90%; background: var(--sage);"></div></div></div>
-      <div class="skill-item"><span>Community & Leadership</span><div class="skill-bar"><div class="skill-fill" style="width:85%; background: var(--sage);"></div></div></div>
+      <div class="skill-item"><span>Community &amp; Leadership</span><div class="skill-bar"><div class="skill-fill" style="width:85%; background: var(--sage);"></div></div></div>
     </div>
   </div>
 </section>
@@ -1167,7 +1245,7 @@
 
 <section>
   <div class="section-header">
-    <span class="section-num">08</span>
+    <span class="section-num">09</span>
     <h2 class="section-title">Currently Exploring</h2>
   </div>
   <div class="exploring-grid">
